@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    background-color: #2061A3;
+}
+
+header .logo img {
+    margin: 20px;
+}
+
+.navbar-nav .nav-item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+nav .nav-link {
+    padding: 1%;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Roboto', 'Tahoma';
+}
+
+.nav-link:hover {
+    padding-bottom: 0.4rem;
+    border-bottom: 0.3rem solid #313153;
+    font-weight: bold;
+}
+
+main {
+    padding-top: 140px;
+    flex: 1;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Tahoma';
+}
+
+h1 {
+    font-family: 'Tahoma';
+    color: #2061A3;
+}
+
+#dadosApi h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Tahoma';
+}
+
+th {
+    background-color: #2061A3;
+    color: white;
+}
+
+#fonte {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Tahoma';
+}
+
+#dengue, #sintomas, #tiposDengue, #prevencao, #ubs {
+    padding: 3rem;
+}
+
+.corpo-dengue h1 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 40px;
+    padding-top: 35px;
+}
+
+.corpo-dengue p {
+    padding: 2%;
+    text-align: justify;
+    line-height: 30px;
+}
+
+#imagemDengue img {
+    width: 50rem;
+    border-radius: 15%;
+}
+
+.tiposDengue h1 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 40px;
+    padding-top: 35px;
+}
+
+.sintomas h1 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 40px;
+    padding-top: 35px;
+}
+
+.sintomas p {
+    padding: 2%;
+    text-align: justify; 
+}
+
+#imagemSintoma  img {
+    width: 50rem;
+    border-radius: 15%;
+}
+
+.prevencao h1 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 40px;
+    padding-top: 35px;
+}
+
+.prevencao p {
+    padding: 2%;
+    text-align: justify; 
+}
+
+.card {
+    height: 35rem;
+}
+
+.card p{
+    padding: 5%;
+    text-align: justify;    
+}
+
+.ubs h1 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 40px;
+    padding-top: 35px;
+}
+
+.ubs h1 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 40px;
+    padding-top: 35px;
+}
+
+.ubs p {
+    padding: 2%;
+    text-align: justify; 
+}
+
+footer {
+    background-color: #2061A3;
+    width: 100%;
+    height: 50px;
+    font-family: 'Roboto', 'Tahoma';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer p {
+    margin-top: 1%;
+    text-align: center;
+    color: #ffffff;
+}

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/js/api.js">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="/js/script.js"></script>
+    <title>Prefeitura de Indaiatuba</title>
+</head>
+
+<body>
+    <div id="container" class="d-flex flex-column min-vh-100">
+        <header class="text-white fixed-top">
+            <div class="container">
+                <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/prefeitura.png" alt="Prefeitura de Indaiatuba" class="img-fluid" width="155">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#dengue">O que é</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#tiposDengue">Tipos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#sintomas">Sintomas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#prevencao">Prevenção</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#ubs">UBS's</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        <main class="flex-grow-1 mt-5 pt-4">
+
+            <!-- TABELA COM DADOS DA API -->
+            <section id="dadosApi" class="row my-4 p-3 bg-light shadow rounded">
+                <h1>Casos Dengue - Indaiatuba</h1>
+                <div class="table-responsive">
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>SE</th>
+                                <th>Casos Estimados</th>
+                                <th>Casos Estimados Mínimos</th>
+                                <th>Casos Estimados Máximos</th>
+                                <th>Casos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dados aqui -->
+                        </tbody>
+                    </table>
+                </div>
+                <p id="fonte"> <strong> Fonte: </strong> Infodengue, disponível em: <a
+                        href="https://info.dengue.mat.br/services/api"> https://info.dengue.mat.br/services/api </a></p>
+            </section>
+
+
+            <!-- O QUE É A DENGUE -->
+            <section id="dengue" class="row my-4 bg-light shadow rounded">
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="corpo-dengue">
+                        <h1>O que é a dengue?</h1>
+                        <p>
+                            A dengue é uma doença infecciosa que pode variar de forma benigna até uma forma mais
+                            grave,
+                            dependendo de qual o vírus envolvido, de infecções anteriores e condições de
+                            individuais, como
+                            doenças crônicas.
+                            O vírus da dengue é transmitido pelos mosquitos Aedes aegypti, com quatro sorotipos
+                            conhecidos:
+                            1, 2, 3 e 4.
+                            A transmissão ocorre pela picada da fêmea do mosquito, não havendo transmissão pelo
+                            contato
+                            direto com um doente, suas secreções, ou por meio de água ou alimentos.
+                        </p>
+                    </div>
+                </div>
+                <div id="imagemDengue" class="col-md-6 d-flex justify-content-center align-items-center">
+                    <img src="images/dengue_mosquito.jpg" alt="foto do mosquito Aedes Aegypti, transmissor da dengue"
+                        class="img-fluid" />
+                </div>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Dengue em um estado mais grave
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Antigamente o estado mais grave da dengue era conhecido
+                                como <strong> Dengue Hemorragica.</strong>
+                                Os sintomas comuns incluem febre alta, dores de cabeça, dores musculares e
+                                articulares,
+                                além de erupções cutâneas. Porém em casos graves, pode evoluir para um estado mais
+                                alarmante,
+                                caracterizada por sangramentos, queda na pressão arterial e risco de choque. A
+                                prevenção
+                                é fundamental, envolvendo medidas como eliminação de criadouros do mosquito e uso de
+                                repelentes.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- TIPOS DE DENGUE -->
+            <section id="tiposDengue" class="row my-4 bg-light shadow rounded justify-content-center">
+                <div class="tiposDengue col-12 text-center mb-4">
+                    <h1>Tipos de grupos de Dengue</h1>
+                </div>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                Grupo A
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            data-bs-parent="accordionTiposDengue">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Dengue sem sinais de alarme, sem condição especial, sem risco social e sem
+                                        comorbidades. </li>
+                                    <li>Iniciar hidratação oral dos pacientes de imediato de acordo com a
+                                        classificação, enquanto aguardam exames laboratoriais</li>
+                                    <li>Acompanhamento: Ambulatorial </li>
+                                </ul>
+                                <p> <strong> Importante: </strong>Os sinais de alarme e agravamento do quadro
+                                    costumam ocorrer na fase
+                                    de remissão da febre. Retorno Imediato na presença de sinais de alarme ou no dia
+                                    da melhora da febre (possível Início da fase crítica); caso não haja
+                                    defervescência, retornar no 5º dia da doença. Entregar cartão de acompanhamento
+                                    de dengue. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Grupo B
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Dengue sem sinais de alarme, com condição especial, ou com risco social
+                                        e com comorbidades. </li>
+                                    <li>Iniciar hidratação oral dos pacientes de imediato de acordo com a
+                                        classificação, enquanto aguardam exames laboratoriais. </li>
+                                    <li>Alta Retorno diário para reavaliação clínica e laboratorial (até 48
+                                        horas após a remissão da febre). Manter hidratação oral. </li>
+                                    <li>Acompanhamento: em leito de observação até resultado de exames e
+                                        reavaliação clínica. </li>
+                                    <li>Exames complementares: Hemograma completo: obrigatório. </li>
+                                    <li>Conduta Hidratação oral (conforme Grupo A) até o resultado dos exames</li>
+                                    <li>Hematócrito normal: Tratamento ambulatorial. </li>
+                                    <li>Hemoconcentração ou sinais de alarme: Conduzir como grupo C. </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Grupo C
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Sinais de alarme presentes e sinais de gravidade ausentes:</p>
+                                <ul>
+                                    <li>Dor abdominal (referida ou à palpação) e contínua. </li>
+                                    <li>Vômitos persistentes </li>
+                                    <li>Acúmulo de líquidos (ascite, derrame pleural, derrame pericárdico).</li>
+                                    <li>Hipotensão postural e/ou lipotimia </li>
+                                    <li>Hepatomegalia maior do que 2 cm abaixo do rebordo costal.</li>
+                                    <li>Sangramento de mucosa. </li>
+                                    <li>Letargia e/ou irritabilidade. </li>
+                                    <li>Aumento progressivo do hematócrito. </li>
+                                </ul>
+                                <p>Iniciar hidratação venosa dos pacientes de imediato de acordo com a
+                                    classificação, enquanto aguardam exames laboratoriais. </p>
+                                <p>Acompanhamento: Em leito de internação até estabilização – mínimo de 48h </p>
+                                <p>Exames complementares: </p>
+                                <ul>
+                                    <li>Obrigatórios: hemograma completo, dosagem de albumina sérica e
+                                        transaminases. </li>
+                                    <li>Recomendados: raio-x de tórax (PA, perfil e incidência de Laurell) e USG
+                                        de abdome.</li>
+                                    <li>Outros exames conforme necessidade: glicemia, ureia, creatinina,
+                                        eletrólidos. Gasometria, TPAE e ecocardiograma. </li>
+                                    <li>Exames específicos para confirmação de dengue são obrigatórios, mas não
+                                        são essenciais para conduta clínica. </li>
+                                </ul>
+                                <p>Reavaliação clínica: A cada 1h ou 2h </p>
+                                <p>Critério de alta: </p>
+                                <ul>
+                                    <li>Estabilização hemodinâmica durante 48 horas. </li>
+                                    <li>Ausência de febre por 24 horas.</li>
+                                    <li>Melhora visível do quadro clínico. </li>
+                                    <li>Hematócrito normal e estável por 24 horas. </li>
+                                    <li>Plaquetas em elevação. </li>
+                                </ul>
+                                <p>Retorno: Após preencher critérios de alta, o retorno para reavaliação clínica
+                                    e laboratorial segue orientação, conforme grupo B. Preencher e entregar
+                                    cartão de acompanhamento </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Grupo D
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p><strong>Importante:</strong>A nomenclatura atual para a antiga “dengue
+                                    hemorrágica” é Dengue Grave, referente ao Grupo D. </p>
+                                <ul>
+                                    <li>Extravasamento grave de plasma, levando ao choque evidenciado por
+                                        taquicardia; extremidades distais frias; pulso fraco e filiforme;
+                                        enchimento capilar lento (>2 segundos); pressão arterial convergente
+                                        (< 20 mm Hg); taquipneia; oliguria (< 1,5 ml/kg/h); hipotensão arterial (fase
+                                            tardia do choque); cianose (fase tardia do choque); acumulação de líquidos
+                                            com insuficiência respiratória. </li>
+                                    <li>Sangramento grave </li>
+                                    <li>Comprometimento grave dos órgãos </li>
+                                </ul>
+                                <p>Iniciar hidratação venosa dos pacientes de imediato de acordo com a
+                                    classificação, enquanto aguardam exames laboratoriais. </p>
+                                <p>Acompanhamento: Em leito de UTI até estabilização – mínimo de 48h </p>
+                                <p>Exames complementares: </p>
+                                <ul>
+                                    <li>Obrigatórios: hemograma completo, dosagem de albumina sérica e
+                                        transaminases. </li>
+                                    <li>Recomendados: raio-x de tórax (PA, perfil e incidência de Laurell) e
+                                        USG de abdome. </li>
+                                    <li>Outros exames conforme necessidade: glicemia, ureia, creatinina,
+                                        eletrólidos. Gasometria, TPAE e ecocardiograma. </li>
+                                    <li>Exames específicos para confirmação de dengue são obrigatórios, mas
+                                        não são essenciais para conduta clínica. </li>
+                                </ul>
+                                <p>Reavaliação clínica a cada 15-30 minutos e hematócrito em 2h. </p>
+                                <p><strong>Observação:</strong> Estes pacientes precisam ser constantemente
+                                    monitorados. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SINTOMAS DA DENGUE -->
+            <section id="sintomas" class="row my-4 bg-light shadow rounded">
+                <div class="col-md-6 d-flex justify-content-center align-items-center" id="imagemSintoma">
+                    <img src="images/sintomasDengue.png"
+                        alt="foto de um braço com manchas vermelhas, um dos sintomas da dengue" class="img-fluid" />
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="sintomas">
+                        <h1>Sintomas</h1>
+                        <p>
+                            Os sintomas da dengue podem variar em intensidade e de acordo com sua gravidade, mas
+                            geralmente incluem:
+                        </p>
+                        <ul>
+                            <li>Febre alta;</li>
+                            <li> Dores musculares e articulares; </li>
+                            <li>Dor de cabeça;</li>
+                            <li>Erupções cutâneas;</li>
+                        </ul>
+
+                        <p>
+                            Em casos mais graves, podem ocorrer:
+                        </p>
+                        <ul>
+                            <li>Sangramentos nas gengivas, nariz ou pele;</li>
+                            <li>Queda na pressão arterial;</li>
+                            <li>Sintomas de choque;</li>
+                        </ul>
+                        <p>
+                            É importante estar atento aos sinais de alerta e buscar assistência médica se
+                            necessário.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PREVENÇÃO E COMBATE A DENGUE -->
+            <section id="prevencao" class="row my-4 bg-light shadow rounded justify-content-center">
+                <div class="prevencao col-12 text-center mb-4">
+                    <h1>Conscientização da população de Indaiatuba</h1>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-sm-6 mb-3">
+                        <div class="card">
+                            <img src="/images/prevencao.jpg" class="card-img-top"
+                                alt="mosquito Aedes Aegypti com um simbolo de bloqueado por cima dele">
+                            <div class="card-body">
+                                <p><strong class="card-text"> Medidas preventidas </strong></p>
+                                <p> A dengue é uma ameaça séria à nossa saúde. Com o aumento dos
+                                    casos,
+                                    é crucial tomar medidas como: </p>
+                                <ul>
+                                    <li>Eliminar água parada em sua casa; </li>
+                                    <li>Usar repelentes;</li>
+                                    <li>Proteger-se contra picadas de mosquito</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mb-3">
+                        <div class="card">
+                            <img src="/images/dengue.png" class="card-img-top"
+                                alt="pessoa passando repelente contra a dengue" id="repelente">
+                            <div class="card-body">
+                                <p><strong class="card-text">O que fazer ao Suspeitar de Dengue: </strong></p>
+                                <ul>
+                                    <li>Procurar assistência médica imediatamente;</li>
+                                    <li>Descansar;</li>
+                                    <li>Beber bastante água;</li>
+                                    <li>Evitar medicamentos sem a orientação médica;</li>
+                                    <li> Seguir as orientações médicas para garantir uma recuperação adequada</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mb-3">
+                        <div class="card">
+                            <img src="/images/prevencao_pneu.jpeg" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <p><strong class="card-text">Como combater e previnir a Dengue: </strong></p>
+                                <ul>
+                                    <li>Eliminar todos os recipientes que possam acumular água, como vasos de
+                                        plantas,
+                                        pneus e recipientes vazios;</li>
+                                    <li>Manter caixas d'água e piscinas devidamente tampadas e limpas;</li>
+                                    <li>Usar repelentes e instalar telas em portas e janelas para evitar a entrada
+                                        de
+                                        mosquitos;</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- UBS DE INDAIATUBA -->
+            <section id="ubs" class="row my-4 bg-light shadow rounded justify-content-center">
+                <div class="ubs col-12 text-center mb-4">
+                    <h1>Unidades Básicas de Saúde em Indaiatuba:</h1>
+                </div>
+                <div class="list-group">
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-i/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS I - Hospital Dia</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Avenida Visconde de Indaiatuba, 199</p>
+                        <p class="mb-1">Horário de Atendimento: 7h às 16h30min – 07h30min às 16h30min </p>
+                        <p class="mb-1">Telefone: 3825-6430</p>
+                    </a>
+
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-ii-cecap/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS II - Cecap</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Praça Vital Barnabé, 197 - Cecap</p>
+                        <p class="mb-1">Horário de Atendimento: 7h às 20h – segunda-feira à sexta-feira </p>
+                        <p class="mb-1">Telefone: 3875-5766 / 6784</p>
+                    </a>
+
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-iv/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS IV - Morada do Sol</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Coronel Julio Pereira de Blum, 193 - Morada do Sol</p>
+                        <p class="mb-1">Horário de Atendimento: 8h às 17h </p>
+                        <p class="mb-1">Telefone: 3935-2754</p>
+                    </a>
+
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-v-itaici/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS V - Itaici</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Rua Joaquim Pedroso de Alvarenga, s/nº - Itaici</p>
+                        <p class="mb-1">Horário de Atendimento: 7h às 17h – Sala de vacina até as 16h30min</p>
+                        <p class="mb-1">Telefone: 3894-7600</p>
+                    </a>
+
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-vii/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS VII</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Rua José de Campos, 709 </p>
+                        <p class="mb-1">Horário de Atendimento: 7h às 17h – Sala de vacina 07h30min às 16h30min </p>
+                        <p class="mb-1">Telefone: 3935-5012 / 3338</p>
+                    </a>
+
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-ix-centro/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS IX - Centro</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Rua São Carlos, 585 - Centro</p>
+                        <p class="mb-1">Horário de Atendimento: 7h às 17h – Sala de vacina das 07h30min às 16h30min </p>
+                        <p class="mb-1">Telefone: 3875-9368</p>
+                    </a>
+
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-x/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS X - Califórnia</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Rua Basílio Martins, 830 - Califórnia</p>
+                        <p class="mb-1">Horário de Atendimento: 7h às 17h – Sala de vacina 7h30min às 16h30min </p>
+                        <p class="mb-1">Telefone: 3894-5375 / 5345</p>
+                    </a>
+
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-camargo-andrade/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS Camargo Andrade</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Rua Rudolf Theodor Schel, 72 - Camargo Andrade</p>
+                        <p class="mb-1">Horário de Atendimento: 7h às 17h – Sala de vacina 07h30min às 16h30min</p>
+                        <p class="mb-1">Telefone: 3825-2134</p>
+                    </a>
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-joao-pioli/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS João Pioli</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Av. Manoel Ruz Perez, 3265 - João Pioli </p>
+                        <p class="mb-1">Horário e Atendimento: 7h às 17h – Sala de vacina 07h30min às 16h30min -
+                            segunda-feira à sexta-feira</p>
+                        <p class="mb-1">Telefone: 3835-4836 / 5522</p>
+                    </a>
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-xii/" target="_blank"
+                        class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS XII - Campo Bonito</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Avenida Otília Ferraz de Camargo, 817 - Campo Bonito</p>
+                        <p class="mb-1">Horário de Atendimento: 7h às 17h - segunda-feira à sexta-feira</p>
+                        <p class="mb-1">Telefone: 3936-1787 / 1871</p>
+                    </a>
+                    <a href="https://www.indaiatuba.sp.gov.br/saude/atencao-basica/ubs-jardim-das-maritacas/"
+                        target="_blank" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">UBS Jardim das Maritacas</h5>
+                        </div>
+                        <p class="mb-1">Endereço: Rua José Brossi, 50 - Maritacas</p>
+                        <p class="mb-1">Horário de Atendimento: 7h às 17h – Sala de vacina 07h30min às 16h30min </p>
+                        <p class="mb-1">Telefone: (19) 9 9944-2693</p>
+                    </a>
+                </div>
+            </section>
+    </div>
+    </main>
+
+    <footer id="footer" class="text-white text-center py-3">
+        <p>1°Semestre - Desenvolvimento de Software Multiplataformas - Fatec Indaiatuba - 2024</p>
+    </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
